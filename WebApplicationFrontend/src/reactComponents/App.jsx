@@ -1,4 +1,3 @@
-import '../css/style.scss';
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';

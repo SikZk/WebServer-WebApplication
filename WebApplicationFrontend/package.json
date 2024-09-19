@@ -16,10 +16,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "../../../WebstormProjects/reactappforwebserverinc/node_modules/.bin/react-scripts start",
+    "build": "../../../WebstormProjects/reactappforwebserverinc/node_modules/.bin/react-scripts build",
+    "test": "../../../WebstormProjects/reactappforwebserverinc/node_modules/.bin/react-scripts test",
+    "eject": "../../../WebstormProjects/reactappforwebserverinc/node_modules/.bin/react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
