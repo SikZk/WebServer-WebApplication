@@ -20,9 +20,9 @@
 
 int listening_socket;
 int main_pid;
-char *header200 = "HTTP/1.0 200 OK\nServer: CS241Serv v0.1\nContent-Type: text/html\n\n";
-char *header400 = "HTTP/1.0 400 Bad Request\nServer: CS241Serv v0.1\nContent-Type: text/html\n\n";
-char *header404 = "HTTP/1.0 404 Not Found\nServer: CS241Serv v0.1\nContent-Type: text/html\n\n";
+char *header200 = "HTTP/1.0 200 OK\nServer: CS241Serv v0.1\nContent-Type: text/html\n";
+char *header400 = "HTTP/1.0 400 Bad Request\nServer: CS241Serv v0.1\nAccess-Control-Allow-Origin: *\nContent-Type: text/html\n\n";
+char *header404 = "HTTP/1.0 404 Not Found\nServer: CS241Serv v0.1\nAccess-Control-Allow-Origin: *\nContent-Type: text/html\n\n";
 
 typedef struct {
     pthread_mutex_t mutex_lock;
@@ -298,8 +298,12 @@ httpRequest parseRequest(char *message) {
     if (content_type != NULL) {
         ret.header.content_type = strdup(content_type);
         free(content_type);
-    } else {
-        ret.return_code = 400;
+    }else {
+        if(strcmp(ret.method, "OPTIONS") == 0) {
+            ret.return_code = 200;
+        }else {
+            ret.return_code = 400;
+        }
     }
 
     if (filename != NULL) {
@@ -317,45 +321,77 @@ httpRequest parseRequest(char *message) {
     }
     return ret;
 }
-char* get_json_claim(const char *json_str, const char *claim) {
-    if(strcmp(claim,"email")==0) {
-        return "user1";
-    }else if(strcmp(claim,"password")==0) {
-        return "password1";
-    }else {
-        return "INVALID";
+char* get_json_claim(const char* text, const char* word) {
+    // Pseudo JSON parser, it's not working with nested JSON structures
+
+    char pattern1[256];
+    char pattern2[256];
+    snprintf(pattern1, sizeof(pattern1), "\"%s\":\"", word);
+    snprintf(pattern2, sizeof(pattern2), "\"%s\": \"", word);
+
+    char* start = strstr(text, pattern1);
+    if (start == NULL) {
+        start = strstr(text, pattern2);
+        if (start == NULL) {
+            return NULL;
+        }
     }
+
+    start += strlen(start == strstr(text, pattern1) ? pattern1 : pattern2);
+    char* end = strchr(start, '"');
+    if (end == NULL) {
+        return NULL;
+    }
+
+    size_t value_len = end - start;
+
+    char* value = (char*)malloc(value_len + 1);
+    if (value == NULL) {
+        return NULL;
+    }
+    strncpy(value, start, value_len);
+    value[value_len] = '\0';
+
+    return value;
 }
 
 
-
 int printResponse(int connection_socket, httpRequest details) {
+    char *CORS_HEADER = "Access-Control-Allow-Origin: *\n\n";
     char ret[1024];
     if(details.return_code == 400) {
         sendMessage(connection_socket, header400);
         return strlen(header400);
+    }else if(details.return_code == 200 && strcmp(details.method, "OPTIONS") == 0) {
+        char *OPTIONS = "HTTP/1.1 200 OK\r\n"
+                "Access-Control-Allow-Origin: *\r\n"
+                "Access-Control-Allow-Methods: POST, GET, OPTIONS\r\n"
+                "Access-Control-Allow-Headers: Content-Type\r\n\r\n";
+        sendMessage(connection_socket, OPTIONS);
+        return strlen(OPTIONS);
     }
     if(strcmp(details.header.content_type,"application/json")==0) {
         if (strcmp(details.filename, "/login") == 0 && strcmp(details.method, "POST") == 0) {
-            log_request(details.body);
 
             char *username = get_json_claim(details.body, "email");
             char *password = get_json_claim(details.body, "password");
-
             memset(ret, 0, sizeof(ret));
 
             if (check_credentials_in_database(username, password) == 1) {
-                log_request("Success login attempt");
+                char log_message[256];
+                snprintf(log_message, sizeof(log_message), "Success login attempt for user: %s and password: %s", username, password);
+                log_request(log_message);
                 strcat(ret, header200);
                 strcat(ret, "Set-Cookie: session=1\n");
+                strcat(ret, CORS_HEADER);
                 sendMessage(connection_socket, ret);
                 free(username);
                 free(password);
                 return strlen(ret);
             } else {
-                log_request(username);
-                log_request(password);
-                log_request("Failed login attempt");
+                char log_message[256];
+                snprintf(log_message, sizeof(log_message), "Failed login attempt for user: %s and password: %s", username, password);
+                log_request(log_message);
                 sendMessage(connection_socket, header404);
                 free(username);
                 free(password);
@@ -465,6 +501,11 @@ int main(void) {
                 log_request(info_log);
                 printf("%s\n", info_log);
                 free(info_log);
+                free(details.body);
+                free(details.filename);
+                free(details.method);
+                free(details.header.content_type);
+                free(details.header.user_agent);
                 close(connection_socket);
             }
         }

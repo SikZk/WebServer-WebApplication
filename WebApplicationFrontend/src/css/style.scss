@@ -1,0 +1,25 @@
+.header{
+  background-color: #A04747;
+  color: whitesmoke;
+  padding: 10px;
+  text-align: center;
+}
+.contentContainer {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90vw;
+  height: 86vh;
+  background-color: #C96868;
+}
+
+.HttpBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  margin: 5px;
+  max-width: 45vw;
+  justify-content: center;
+}

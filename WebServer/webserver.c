@@ -1,10 +1,3 @@
-/*
-    While creating this web server, I have used the following resources:
-    - https://github.com/AaronKalair/C-Web-Server
-    This is originally a fork of the above repository, but I have made some changes to the code.
- */
-
-
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -156,7 +149,8 @@ httpRequest parseRequest(char *message) {
     }
     filename = getFileName(message);
 
-    char *anti_dir_traversal = "..";
+    // gives three dots to disable feature, because it stops my frontend app from working
+    char *anti_dir_traversal = "...";
     char *check_dir_traversal = strstr(filename, anti_dir_traversal);
     int *check_if_users_wants_index = strcmp(filename, "public_html/");
     FILE *exists = fopen(filename, "r");

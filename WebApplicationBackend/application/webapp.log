@@ -1,0 +1,72 @@
+[2024-09-19 18:03:17] - ----------------
+[2024-09-19 18:03:17] - Starting web application
+[2024-09-19 18:03:20] - Process 137263 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 18:03:20] - Failed login attempt for user: dsa and password: das
+[2024-09-19 18:03:20] - Process 137264 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 18:03:27] - Process 137266 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 18:03:27] - Failed login attempt for user: dsa and password: dsa
+[2024-09-19 18:03:27] - Process 137265 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 18:03:37] - Process 137267 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 18:03:37] - Success login attempt for user: user1 and password: password1
+[2024-09-19 18:03:37] - Process 137268 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 18:03:57] - Failed login attempt for user: usdsadaer1 and password: password1
+[2024-09-19 18:03:57] - Process 137269 made /login endpoint call. User agent was FrontendApplication
+[2024-09-19 18:06:00] - Process 137270 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 18:06:00] - Failed login attempt for user: dsadsa and password: dsa
+[2024-09-19 18:06:00] - Process 137271 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 18:06:52] - Failed login attempt for user: usdsadaer1 and password: password1
+[2024-09-19 18:06:52] - Process 137272 made /login endpoint call. User agent was FrontendApplication
+[2024-09-19 18:06:58] - Success login attempt for user: user1 and password: password1
+[2024-09-19 18:06:58] - Process 137273 made /login endpoint call. User agent was FrontendApplication
+[2024-09-19 18:07:02] - Process 137263 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 18:07:02] - Failed login attempt for user: dsadsa and password: dsa
+[2024-09-19 18:07:02] - Process 137264 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 18:07:10] - Process 137266 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 18:07:10] - Success login attempt for user: user1 and password: password1
+[2024-09-19 18:07:10] - Process 137265 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 18:07:45] - Process 137267 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 18:07:45] - Success login attempt for user: user1 and password: password1
+[2024-09-19 18:07:45] - Process 137268 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 18:13:25] - Failed login attempt for user: usesr1 and password: password1
+[2024-09-19 18:13:25] - Process 137269 made /login endpoint call. User agent was FrontendApplication
+[2024-09-19 18:13:43] - Process 137270 made public_html/api/sv1/login endpoint call. User agent was FrontendApplication
+[2024-09-19 18:13:52] - Process 137271 made /login endpoint call. User agent was (null)
+[2024-09-19 18:15:13] - Process 137272 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 18:15:13] - Failed login attempt for user: dsa and password: dsa
+[2024-09-19 18:15:13] - Process 137273 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 18:15:20] - Process 137263 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 18:15:20] - Success login attempt for user: user1 and password: password1
+[2024-09-19 18:15:20] - Process 137264 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 18:24:17] - Terminating server
+[2024-09-19 18:50:20] - ----------------
+[2024-09-19 18:50:20] - Starting web application
+[2024-09-19 19:07:07] - Process 162655 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 19:07:07] - Failed login attempt for user: dsa and password: dsa
+[2024-09-19 19:07:07] - Process 162656 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 19:14:02] - Terminating server
+[2024-09-19 19:15:50] - ----------------
+[2024-09-19 19:15:50] - Starting web application
+[2024-09-19 19:16:20] - Process 176889 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 19:16:20] - Failed login attempt for user: fdas and password: ed
+[2024-09-19 19:16:20] - Process 176890 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 19:57:14] - Process 176891 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 19:57:14] - Failed login attempt for user: dsa and password: das
+[2024-09-19 19:57:14] - Process 176892 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 19:57:20] - Process 176893 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 19:57:20] - Success login attempt for user: user1 and password: password1
+[2024-09-19 19:57:20] - Process 176894 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 19:57:24] - Failed login attempt for user: user1dsadsadsa and password: password1
+[2024-09-19 19:57:24] - Process 176895 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 19:57:25] - Failed login attempt for user: user1dsadsadsa and password: password1dsaas
+[2024-09-19 19:57:25] - Process 176896 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 19:58:22] - Terminating server
+[2024-09-19 19:58:26] - ----------------
+[2024-09-19 19:58:26] - Starting web application
+[2024-09-19 19:59:03] - ----------------
+[2024-09-19 19:59:03] - Starting web application
+[2024-09-19 19:59:06] - Process 200367 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 19:59:06] - Failed login attempt for user: user and password: password1
+[2024-09-19 19:59:06] - Process 200368 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 19:59:12] - Process 200369 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+[2024-09-19 19:59:12] - Success login attempt for user: user1 and password: password1
+[2024-09-19 19:59:12] - Process 200370 made /login endpoint call. User agent was Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
